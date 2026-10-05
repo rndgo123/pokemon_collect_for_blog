@@ -22,9 +22,10 @@ class BlogDraftTest(unittest.TestCase):
             content_hash="hash",
         )
         draft = render_blog_draft(event)
-        self.assertIn("# 야돈 이벤트 안내 | 공식 정보 정리", draft)
-        self.assertIn("관련 포켓몬: 야돈", draft)
-        self.assertIn("행사 기간, 상세 장소 정보가 없습니다", draft)
+        self.assertIn("야돈 이벤트 안내", draft)
+        self.assertIn("| 관련 포켓몬 | 야돈 |", draft)
+        self.assertNotIn("정리했습니다", draft)
+        self.assertNotIn("행사 기간", draft)
         self.assertIn("#야돈", draft)
         self.assertNotIn("지역·장소: KR", draft)
 

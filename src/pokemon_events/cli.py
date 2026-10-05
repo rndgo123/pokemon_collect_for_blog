@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "tag":
             return _tag(repository)
         if args.command == "draft":
-            return _draft(repository, args.id)
+            return _draft(repository, args.id, args.notes, args.output)
         if args.command == "digest":
             return _digest(repository, args)
         return _show_events(repository, args)
@@ -63,6 +63,8 @@ def _parser() -> argparse.ArgumentParser:
 
     draft = commands.add_parser("draft", help="render a factual blog draft")
     draft.add_argument("--id", required=True, help="event id shown by the events command")
+    draft.add_argument("--notes", type=Path, help="reviewed editorial TOML notes")
+    draft.add_argument("--output", type=Path, help="create a new Markdown file; never overwrite")
 
     digest = commands.add_parser("digest", help="show actionable blog candidates")
     digest.add_argument("--days", type=_positive_int, default=7)
@@ -173,12 +175,32 @@ def _tag(repository: SQLiteRepository) -> int:
     return 0
 
 
-def _draft(repository: SQLiteRepository, event_id: str) -> int:
+def _draft(
+    repository: SQLiteRepository, event_id: str, notes_path: Path | None = None,
+    output: Path | None = None,
+) -> int:
     event = repository.get_event(event_id)
     if event is None:
         print(f"event not found: {event_id}", file=sys.stderr)
         return 1
-    print(render_blog_draft(event))
+    try:
+        notes = None
+        if notes_path:
+            with notes_path.open("rb") as file:
+                notes = tomllib.load(file)
+        draft = render_blog_draft(event, notes)
+        if output:
+            if output.suffix.lower() != ".md":
+                raise ValueError("output must be a .md file")
+            output.parent.mkdir(parents=True, exist_ok=True)
+            with output.open("x", encoding="utf-8", newline="\n") as file:
+                file.write(draft)
+            print(f"draft={output.resolve()}")
+        else:
+            print(draft)
+    except (OSError, ValueError, TypeError) as error:
+        print(f"draft failed: {error}", file=sys.stderr)
+        return 1
     return 0
 
 

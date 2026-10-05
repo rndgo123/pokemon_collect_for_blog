@@ -7,4 +7,4 @@
 - Version project code, tests, configuration templates and project documentation. Never use `git add .` in this mixed blog workspace.
 - Exclude databases, reports, credentials, personal blog drafts, original photos and unrelated folders unless explicitly requested.
 - Keep source approval and disabled-source gates. Do not bypass login, CAPTCHA, 403/429 or source policies.
-- For blog prose, read `블로그_SEO_전략.md` locally; do not claim that the current generic draft renderer already applies that style.
+- For blog prose, read `블로그_SEO_전략.md` locally. The draft renderer uses short declarative templates and reviewed editorial notes, not automatic style transfer or translation.

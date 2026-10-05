@@ -1,0 +1,34 @@
+# Editorial example from the product page checked on 2026-10-05.
+# Reviewed means human/source verification, not an automated factual guarantee.
+reviewed = true
+source_url = "https://e.kakao.com/t/pokemon-time-to-run"
+title = "포켓몬 도망 시리즈 카카오톡 이모티콘·가격·구매처 정리"
+intro = [
+  "포켓몬 도망 시리즈가 카카오톡 이모티콘으로 나왔다!",
+  "카카오 이모티콘샵에는 ‘Pokemon Time to Run’이라는 이름으로 올라와 있다."
+]
+
+[facts]
+"상품명" = "Pokemon Time to Run"
+"판매처" = "카카오 이모티콘샵"
+"웹 상품 페이지 판매가" = "3,000원"
+"웹 상품 페이지 기본가" = "3,750원"
+"상품 페이지 확인일" = "2026-10-05"
+
+[[sections]]
+heading = "가격"
+paragraphs = [
+  "확인한 웹 상품 페이지에는 기본가 3,750원에서 20% 할인된 3,000원으로 표시되어 있다.",
+  "이 가격은 웹 상품 페이지 기준이다. 할인이나 결제 조건은 달라질 수 있으니 구매할 때 최종 금액을 한 번 더 확인하는 게 좋겠다."
+]
+
+[[sections]]
+heading = "구성 확인과 선물하기"
+paragraphs = [
+  "개별 이모티콘은 상품 페이지에서 미리 볼 수 있다. 전체 구성을 보고 평소 대화에서 쓸 만한 표현이 있는지 확인하면 될 듯하다.",
+  "직접 구매뿐 아니라 선물하기도 가능하다. 실물로 받는 상품이 아니라 카카오톡에서 사용하는 디지털 이모티콘이라는 점은 참고."
+]
+
+[[sources]]
+label = "카카오 이모티콘샵 — Pokemon Time to Run"
+url = "https://e.kakao.com/t/pokemon-time-to-run"

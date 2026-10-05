@@ -816,4 +816,17 @@ python main.py digest --focus all --limit 10
 ```
 
 상세 규칙과 제한은 [글감 선별 안내](docs/pokemon-goods/CURATION.md)를 참고한다.
-이미지 확보와 개인 문체 초안 출력은 아직 별도 개발 단계다.
+이미지 확보는 아직 별도 개발 단계다.
+
+## 평서형 초안 출력 — 2026-10-05
+
+```powershell
+python main.py draft --id EVENT_ID
+python main.py draft --id EVENT_ID --output reports/draft.md
+python main.py draft --id EVENT_ID --notes config/draft_kakao.example.toml --output reports/kakao-draft.md
+```
+
+마지막 메모는 해당 카카오 상품 URL의 항목에만 적용된다. 자세한 입력 형식은
+[초안 출력 안내](docs/pokemon-goods/DRAFT.md)를 참고한다.
+템플릿 기반 평서형 문체·정보 표·출처를 지원하고, 기존 파일을 덮어쓰지 않는다.
+가격·설명은 원문을 검토한 편집 메모로 보강하며 자동 생성·자동 번역하지 않는다.
