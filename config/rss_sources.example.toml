@@ -1,0 +1,13 @@
+# Example only: not a discovered official feed. Replace URLs after policy review.
+[sources.goods_rss]
+enabled = false
+policy_approved = false
+type = "rss"
+name = "Approved goods feed"
+feed_url = "https://example.com/feed.xml"
+policy_url = "https://example.com/terms"
+country = "JP" # KR / US / JP: publisher country, not proof of sale availability
+category = "GOODS"
+timeout_seconds = 20
+request_delay_seconds = 2
+user_agent = "PokemonEventPipeline/0.1 (personal-use)"

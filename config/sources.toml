@@ -1,0 +1,49 @@
+[sources.pokemon_japan]
+enabled = true
+name = "Pokémon Japan"
+list_url = "https://www.pokemon.co.jp/info/cat_event/"
+api_url = "https://www.pokemon.co.jp/api/info/index/"
+country = "JP"
+event_flag = 11
+page_size = 20
+detail_lookback_days = 30
+detail_refresh_hours = 24
+request_delay_seconds = 2.0
+timeout_seconds = 20.0
+user_agent = "PokemonEventPipeline/0.1 (personal-use)"
+
+[sources.pokemon_korea]
+enabled = true
+name = "Pokémon Korea"
+list_url = "https://www.pokemonkorea.co.kr/news"
+endpoint = "https://www.pokemonkorea.co.kr/ajax/news"
+country = "KR"
+detail_lookback_days = 30
+detail_refresh_hours = 24
+request_delay_seconds = 2.0
+timeout_seconds = 20.0
+user_agent = "PokemonEventPipeline/0.1 (personal-use)"
+
+[sources.pokemon_unite_jp]
+enabled = true
+name = "Pokémon UNITE Japan"
+list_url = "https://www.pokemonunite.jp/ja/topics/"
+country = "JP"
+timeout_seconds = 20.0
+user_agent = "PokemonEventPipeline/0.1 (personal-use)"
+
+[sources.pokemon_go]
+enabled = false
+reason = "Terms prohibit scraping/indexing and crawler access"
+
+[sources.pokemon_center_jp]
+enabled = false
+reason = "Terms prohibit automated collection, crawling, and scraping"
+
+[sources.pokemon_asia_sg]
+enabled = false
+reason = "Terms restrict copying, publishing, transmitting, and distributing content data"
+
+[sources.yadon_kagawa]
+enabled = false
+reason = "No stable news list or feed and robots.txt is unavailable"

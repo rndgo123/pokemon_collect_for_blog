@@ -1,0 +1,1 @@
+"""Pokémon event data pipeline."""

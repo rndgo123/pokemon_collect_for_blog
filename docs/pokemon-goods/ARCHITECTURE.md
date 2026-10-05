@@ -113,10 +113,11 @@ flowchart TD
 | 기능 | 현재 상태 | 목표 |
 |---|---|---|
 | 한국·일본 이벤트 수집 | Korea / Japan / UNITE collector가 CLI에 등록됨 | 정책 검토 후 굿즈 소스로 확대 |
-| RSS 우선 | RSS collector와 우선 라우터는 확인되지 않음 | 유효 RSS가 있으면 우선 선택 |
+| RSS 수집 | RSS 2.0 / Atom 메타데이터 collector 및 설정 기반 CLI 연결; 공식 피드 활성화는 미완료 | 공식 피드·정책 검토 후 활성화; 자동 발견·fallback 라우터는 미구현 |
 | 데이터 정규화 | PokemonEvent dataclass와 검증 | 가격·통화·판매국·출시일·예약일 확장 |
 | DB·변경 이력 | sources / collection_runs / events / event_history | 기존 구조 재사용 |
-| 변경 감지 | NEW / UPDATED / UNCHANGED / ENDED | 굿즈 변경의 의미를 필드별 구분 |
+| 변경 감지 | NEW / UPDATED / UNCHANGED / ENDED 및 실제 변경 필드 조회 | 가격·판매일 등 모델 확장 후 의미 구분 |
+| 글감 선별 | 굿즈·콜라보 우선순위, 선정 이유·확인 과제·동일 링크 묶기 | 실제 피드 활성화·국가별 협업 ID 검증 |
 | Markdown | digest / draft 및 daily.ps1 | 기존 문체·굿즈 표·출처 기반 초안 |
 | 스케줄링 | 일일 스크립트 있음; OS 등록 상태는 미확인 | 사용자 환경에 맞춰 별도 등록 |
 | 원본 스냅샷 | 일부 사실·해시·정규화 이력 저장 | 허용 소스에 한해 선택 보관 |
