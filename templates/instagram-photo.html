@@ -5,16 +5,19 @@
 <title>{{TITLE}}</title>
 <style>
   @font-face { font-family: "Cafe24 Moyamoya"; src: url("fonts/Cafe24Moyamoya-Regular-v1.0.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Cafe24 PRO Slim Max"; src: url("fonts/Cafe24PROSlimMax.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
   * { box-sizing: border-box; }
   body { margin: 0; background: #222; }
   .card { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #66513b; color: white; font-family: "Cafe24 Moyamoya", "Malgun Gothic", sans-serif; font-synthesis: none; }
+  .card.content { font-family: "Cafe24 PRO Slim Max", "Malgun Gothic", sans-serif; }
   .photo { width: 100%; height: 100%; object-fit: cover; transform: scale(1.25); transform-origin: 50% 90%; }
   .shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,.12) 62%, rgba(0,0,0,.7) 100%); }
   .copy { position: absolute; left: 80px; right: 80px; bottom: 148px; text-shadow: 0 2px 10px rgba(0,0,0,.18); }
   .label { margin: 0 0 20px; font-size: 28px; font-weight: 400; letter-spacing: 2px; }
   h1 { margin: 0; font-size: 70px; font-weight: 400; line-height: 1.25; letter-spacing: -3px; }
   .subtitle { margin: 20px 0 0; font-size: 32px; line-height: 1.5; }
-  .source { position: absolute; left: 80px; right: 80px; bottom: 44px; margin: 0; font-size: 20px; opacity: .8; }
+  .watermark { position: absolute; left: 80px; right: 80px; bottom: 66px; margin: 0; text-align: center; font-family: "Cafe24 Moyamoya", sans-serif; font-size: 32px; opacity: .9; }
+  .source { position: absolute; left: 80px; right: 80px; bottom: 28px; margin: 0; text-align: center; font-family: "Cafe24 PRO Slim Max", sans-serif; font-size: 18px; opacity: .65; }
 </style>
 <main class="card" aria-label="{{TITLE}}">
   <img class="photo" src="{{IMAGE}}" alt="{{ALT}}">
@@ -24,6 +27,7 @@
     <h1>{{HEADLINE}}</h1>
     <p class="subtitle">{{SUBTITLE}}</p>
   </div>
+  <p class="watermark">MuliGo</p>
   <p class="source">{{SOURCE}}</p>
 </main>
 </html>

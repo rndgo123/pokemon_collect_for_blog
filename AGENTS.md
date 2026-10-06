@@ -7,5 +7,5 @@
 - Version project code, tests, configuration templates and project documentation. Never use `git add .` in this mixed blog workspace.
 - Exclude databases, reports, credentials, personal blog drafts, original photos and unrelated folders unless explicitly requested.
 - Keep source approval and disabled-source gates. Do not bypass login, CAPTCHA, 403/429 or source policies.
-- For Instagram card news, use Cafe24 Moyamoya v1.0 Regular as the user's default font. Read `docs/INSTAGRAM.md` for local webfont setup and rendering checks.
+- For Instagram card news, use Cafe24 Moyamoya v1.0 Regular on the cover and Cafe24 PRO Slim Max v2.0 from page 2 onward. Add a small centered MuliGo watermark at the bottom. Read `docs/INSTAGRAM.md` for local webfont setup and rendering checks.
 - For every blog prose task, first read Git-tracked `docs/pokemon-goods/EDITORIAL.md`, then read `블로그_SEO_전략.md` locally. Apply the user's declarative style consistently to previews and final drafts. Exclude already-selling products and resale/restock; verify first-launch status. The draft renderer uses short declarative templates and reviewed editorial notes, not automatic style transfer or translation.
